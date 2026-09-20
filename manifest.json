@@ -1,0 +1,13 @@
+{
+  "manifest_version": "1",
+  "id": "tsv_loader",
+  "name": "TSV Loader",
+  "authors": [{ "name": "Vicente Zamora" }],
+  "description": "Data loader for tab-separated (TSV) tabular files.",
+  "version": "1.0.0",
+  "min_app_version": "0.9.0",
+  "components": [
+    { "class": "tsv_dataloader:TSVDataLoader", "type": "DataLoader" }
+  ],
+  "dependencies": []
+}
