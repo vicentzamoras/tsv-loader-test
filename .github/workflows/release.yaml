@@ -15,6 +15,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Set manifest version from the tag
+        run: |
+          version="${GITHUB_REF_NAME#v}"   # v0.0.5 -> 0.0.5
+          jq --arg v "$version" '.version = $v' manifest.json > manifest.tmp
+          mv manifest.tmp manifest.json
+
       - name: Build plugin zip
         run: zip "tsv-loader-${GITHUB_REF_NAME}.zip" manifest.json tsv_dataloader.py
 
