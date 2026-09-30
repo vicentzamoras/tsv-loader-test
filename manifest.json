@@ -1,6 +1,6 @@
 {
   "manifest_version": "1",
-  "id": "tsv_loader",
+  "id": "tsv-loader",
   "name": "TSV Loader",
   "authors": [{ "name": "Vicente Zamora" }],
   "description": "Data loader for tab-separated (TSV) tabular files.",
